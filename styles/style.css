@@ -17,6 +17,8 @@
     --grey-1: #f8f8ff;
     --grey-2: #f3f4f5;
     --grey-3: #65676b;
+    --grey-4: #dddee0;
+    --grey-5: #a0a1a3;
     --black-1: #101010;
     --brand-color: #7026ba;
     --hover-brand-color: #9f47f7;
@@ -86,6 +88,55 @@ h6 {
 
 .brand {
     color: var(--brand-color);
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+@media screen and (max-width: 1192px) {
+    .column-lg {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 72px;
+        line-height: 96px;
+    }
+    
+    h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    
+    h3 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    
+    h4,
+    h6 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .column-md {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .column-sm {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .column-xs {
+        flex-direction: column;
+    }
 }
 
 /* Home Layout */
@@ -222,4 +273,178 @@ h6 {
 
 main .section-content:nth-child(3) {
     background-color: var(--grey-2);
+}
+
+.community-container h3 {
+    font-weight: 700;
+    font-size: 96px;
+    margin-top: 35px;
+    line-height: 110px;
+    margin-bottom: 56px;
+}
+
+.community-container .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 51px 116px;
+}
+
+.community-container p {
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--grey-3);
+}
+
+.icons-wrapper {
+    gap: 31px;
+    font-size: 31px;
+}
+
+.community-container form {
+    border-radius: 100px;
+    width: 368px;
+    height: 56px;
+    overflow: hidden;
+    background-color: var(--grey-2);
+}
+
+.community-container input {
+    width: 100%;
+    outline: none;
+    border: none;
+    color: var(--grey-3);
+    font-weight: 500;
+    background-color: var(--grey-2);
+    padding-left: 20px;
+}
+
+.community-container button[type="submit"] {
+    border: none;
+    background-color: var(--grey-4);
+    padding: 10px 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    width: 110px;
+    cursor: pointer;
+    transition: all 175ms ease;
+}
+
+.community-container button[type="submit"]:hover {
+    color: white;
+    background-color: var(--brand-color);
+}
+
+footer .footer-link-container {
+    margin-top: 180px;
+    gap: 117px;
+}
+
+footer .grid-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 51px 130px;
+    margin-bottom: 60px;
+}
+
+footer .grid-list ul {
+    margin-top: 17px;
+    font-size: 14px;
+    color: var(--grey-3);
+}
+
+footer .grid-list ul li {
+    cursor: pointer;
+    padding: 8.5px 0;
+    transition: all 150ms ease-in;
+}
+
+footer .grid-list ul li:hover {
+    text-decoration: underline;
+    color: var(--grey-5);
+}
+
+footer .copyright {
+    padding: 15px;
+    font-size: 16px;
+    color: var(--grey-3);
+}
+
+@media screen and (max-width: 1192px) {
+    .section-content .section-wrapper .post .img-container {
+        width: 240px;
+        height: 180px;
+    }
+
+    #nav-search {
+        margin: 30px;
+    }
+
+    #nav-search .blog-search {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #main-article {
+        flex-direction: column;
+    }
+
+    #main-article .post-title {
+        flex-grow: 1;
+    }
+
+    #main-article .img-container {
+        width: 490px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main-article .img-container {
+        width: 100%;
+    }
+    
+    .community-container .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .community-container h3 {
+        font-size: 56px;
+        line-height: 72px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #nav-list {
+        display: none;
+    }
+
+    #search-list {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    #search-box {
+        width: 100%;
+        overflow-x: scroll;
+    }
+    
+    .grid-list {
+        grid-template-columns: auto !important;
+        grid-template-rows: auto !important;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    h1 {
+        font-size: 45px;
+        line-height: 56px;
+    }
+
+    h2 {
+        font-size: 34px;
+        line-height: 41px;
+    }
 }
